@@ -96,8 +96,6 @@ hr{
     min-height: 400px;
 }
 
-
-
 .w h4{
     font-size: 35px;
 }
@@ -115,4 +113,13 @@ hr{
 #footer p{
     color: #555;
     font-size: 20px;
+}
+
+.login_form input{
+    margin: 0 auto;
+    display: block;
+}
+
+.login_form h4{
+    text-align: center;
 }
