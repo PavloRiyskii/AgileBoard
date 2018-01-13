@@ -12,14 +12,14 @@ public class User {
     @Id
     private String id;
     private String email;
-    private Integer passHash;
+    private String password;
 
     public User() {
     }
 
-    public User(String email, Integer passHash) {
+    public User(String email, String password) {
         this.email = email;
-        this.passHash = passHash;
+        this.password = password;
     }
 
     public String getId() {
@@ -38,11 +38,11 @@ public class User {
         this.email = email;
     }
 
-    public Integer getPassHash() {
-        return passHash;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassHash(Integer passHash) {
-        this.passHash = passHash;
+    public void setPassword(String passHash) {
+        this.password = passHash;
     }
 }

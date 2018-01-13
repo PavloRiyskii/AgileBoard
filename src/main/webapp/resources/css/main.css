@@ -123,3 +123,20 @@ hr{
 .login_form h4{
     text-align: center;
 }
+
+.signup_form input{
+    margin: 0 auto;
+    display: block;
+    margin-top: -20px;
+}
+
+.signup_form label{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.signup_form h4{
+    text-align: center;
+}

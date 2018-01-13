@@ -24,6 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().hasRole("USER")
                 .and()
                 .formLogin()
+                .loginProcessingUrl("/login")
                 .loginPage("/login")
                 .usernameParameter("username")
                 .passwordParameter("password")
@@ -40,5 +41,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
-
-//59 0003 0947 1962

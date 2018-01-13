@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -28,9 +29,15 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class=""><a href="${pageContext.request.contextPath}/login">Log In</a></li>
-                    <li class=""><a href="${pageContext.request.contextPath}/sign-up">Sign Up</a></li>
-                    <li class=""><a href="${pageContext.request.contextPath}/about">About</a></li>
+                    <sec:authorize access="isAnonymous()">
+                        <li class=""><a href="${pageContext.request.contextPath}/login">Log In</a></li>
+                        <li class=""><a href="${pageContext.request.contextPath}/sign-up">Sign Up</a></li>
+                        <li class=""><a href="${pageContext.request.contextPath}/about">About</a></li>
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                        <li class=""><a href="${pageContext.request.contextPath}/boards" >Boards</a></li>
+                        <li class=""><a href="${pageContext.request.contextPath}/logout">Log Out</a></li>
+                    </sec:authorize>
                 </ul>
             </div>
         </div>

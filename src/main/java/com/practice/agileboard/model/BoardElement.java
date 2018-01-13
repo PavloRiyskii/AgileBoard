@@ -16,7 +16,6 @@ public class BoardElement {
     private String description;
     private Integer position;
 
-    @DBRef
     private UserBoard board;
 
     public BoardElement() {

@@ -14,7 +14,6 @@ public class UserBoard {
     private String id;
 
     private String name;
-    @DBRef()
     private User user;
 
     public UserBoard() {

@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     private UserBoardRepository boardRepository;
 
     public void saveUser(UserDTO dto) {
-        User newUser = new User(dto.getEmail(), dto.getPassword().hashCode());
+        User newUser = new User(dto.getEmail(), dto.getPassword());
 
         newUser = this.userRepository.save(newUser);
         this.boardRepository.save(new UserBoard("To Do", newUser));
