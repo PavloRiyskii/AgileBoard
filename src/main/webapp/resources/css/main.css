@@ -140,3 +140,12 @@ hr{
 .signup_form h4{
     text-align: center;
 }
+
+.boards_title{
+    margin-top: 15px;
+    min-height: 400px;
+}
+.boards_title p{
+    font-family: Raleway;
+    font-size: 20px;
+}
