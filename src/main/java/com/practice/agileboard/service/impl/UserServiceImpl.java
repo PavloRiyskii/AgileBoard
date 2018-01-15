@@ -25,9 +25,9 @@ public class UserServiceImpl implements UserService {
         User newUser = new User(dto.getEmail(), dto.getPassword());
 
         newUser = this.userRepository.save(newUser);
-        this.boardRepository.save(new UserBoard("To Do", newUser));
-        this.boardRepository.save(new UserBoard("In progress", newUser));
-        this.boardRepository.save(new UserBoard("Done", newUser));
+        this.boardRepository.save(new UserBoard("To Do", newUser.getId()));
+        this.boardRepository.save(new UserBoard("In progress", newUser.getId()));
+        this.boardRepository.save(new UserBoard("Done", newUser.getId()));
     }
 
     public User findByEmail(String email) {

@@ -14,14 +14,14 @@ public class UserBoard {
     private String id;
 
     private String name;
-    private User user;
+    private String userId;
 
     public UserBoard() {
     }
 
-    public UserBoard(String name, User user) {
+    public UserBoard(String name, String userId) {
         this.name = name;
-        this.user = user;
+        this.userId = userId;
     }
 
     public String getId() {
@@ -40,11 +40,11 @@ public class UserBoard {
         this.name = name;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

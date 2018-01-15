@@ -40,7 +40,7 @@ public class BoardElementServiceImpl implements BoardElementService {
     public void create(CreateBoardElementDTO dto) {
         BoardElement lastElement = this.elementRepository.findBoardElementByBoardIdOrderByPositionDesc(dto.getBoardId());
         BoardElement element = new BoardElement(dto.getName(), dto.getDescription(),
-                lastElement.getPosition() +  1,this.boardRepository.findOne(dto.getBoardId()));
+                lastElement.getPosition() +  1, dto.getBoardId());
         this.elementRepository.save(element);
     }
 
@@ -51,7 +51,7 @@ public class BoardElementServiceImpl implements BoardElementService {
         BoardElement element = this.elementRepository.findOne(elementId);
         element.setDescription(dto.getDescription());
         element.setName(dto.getName());
-        element.setBoard(this.boardRepository.findOne(dto.getBoardId()));
+        element.setBoardId(dto.getBoardId());
 
         this.elementRepository.save(element);
     }
@@ -65,8 +65,8 @@ public class BoardElementServiceImpl implements BoardElementService {
 
     private boolean checkIsUserResource(String elementId) {
         BoardElement element = this.elementRepository.findOne(elementId);
-        UserBoard board = this.boardRepository.findOne(element.getBoard().getId());
-        User bordOwner = this.userRepository.findOne(board.getUser().getId());
+        UserBoard board = this.boardRepository.findOne(element.getBoardId());
+        User bordOwner = this.userRepository.findOne(board.getUserId());
         String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
         return true ? bordOwner.getEmail() == currentUser : false;
     }

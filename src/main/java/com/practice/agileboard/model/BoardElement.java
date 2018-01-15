@@ -16,17 +16,17 @@ public class BoardElement {
     private String description;
     private Integer position;
 
-    private UserBoard board;
+    private String boardId;
 
     public BoardElement() {
 
     }
 
-    public BoardElement(String name, String description, Integer position, UserBoard board) {
+    public BoardElement(String name, String description, Integer position, String boardId) {
         this.name = name;
         this.description = description;
         this.position = position;
-        this.board = board;
+        this.boardId = boardId;
     }
 
     public String getId() {
@@ -61,11 +61,11 @@ public class BoardElement {
         this.position = position;
     }
 
-    public UserBoard getBoard() {
-        return board;
+    public String getBoardId() {
+        return boardId;
     }
 
-    public void setBoard(UserBoard board) {
-        this.board = board;
+    public void setBoardId(String boardId) {
+        this.boardId = boardId;
     }
 }

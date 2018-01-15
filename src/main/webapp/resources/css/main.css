@@ -149,3 +149,22 @@ hr{
     font-family: Raleway;
     font-size: 20px;
 }
+
+.boards_zone {
+    min-width: 500px;
+}
+
+.tab-pane{
+    min-height:300px;
+    overflow-y:scroll;
+    width:100%;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #8c8c8c;
+}
+
+.panel-default {
+    min-width: 250px;
+    min-height: 500px;
+}

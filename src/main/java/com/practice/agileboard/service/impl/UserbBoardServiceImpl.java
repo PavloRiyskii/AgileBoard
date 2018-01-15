@@ -1,4 +1,4 @@
-package com.practice.agileboard.service;
+package com.practice.agileboard.service.impl;
 
 import com.practice.agileboard.dto.BoardElementDTO;
 import com.practice.agileboard.dto.CreateUserBoardDTO;
@@ -10,6 +10,7 @@ import com.practice.agileboard.model.UserBoard;
 import com.practice.agileboard.repository.BoardElementRepository;
 import com.practice.agileboard.repository.UserBoardRepository;
 import com.practice.agileboard.repository.UserRepository;
+import com.practice.agileboard.service.UserbBoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,7 @@ public  class UserbBoardServiceImpl implements UserbBoardService {
                 elementDTOS.add(new BoardElementDTO(element.getId(), element.getName(), element.getDescription()));
             }
             dto.setElements(elementDTOS);
+            dtos.add(dto);
         }
         return dtos;
     }
@@ -69,7 +71,7 @@ public  class UserbBoardServiceImpl implements UserbBoardService {
     public void create(String userId, CreateUserBoardDTO dto) {
         UserBoard board = new UserBoard();
         board.setName(dto.getName());
-        board.setUser(this.userRepository.findOne(userId));
+        board.setUserId(userId);
 
         this.boardRepository.save(board);
     }
@@ -94,7 +96,7 @@ public  class UserbBoardServiceImpl implements UserbBoardService {
 
     private boolean checkIsUserResource(String boardId) {
         UserBoard board = this.boardRepository.findOne(boardId);
-        User bordOwner = this.userRepository.findOne(board.getUser().getId());
+        User bordOwner = this.userRepository.findOne(board.getUserId());
         String currentUser = SecurityContextHolder.getContext().getAuthentication().getName();
         return true ? bordOwner.getEmail() == currentUser : false;
     }
