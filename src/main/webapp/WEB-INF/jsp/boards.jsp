@@ -14,6 +14,7 @@
     <title>Boards</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -57,12 +58,16 @@
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <h3>${board.name}</h3>
+                                                            <a href="#"><i class="icon-fixed-width icon-pencil pull-right"></i></a>
+                                                            <a href="#"><i class="icon-remove pull-right"></i></a>
                                                         </div>
                                                         <div class="panel-body">
                                                             <c:forEach items="${board.elements}" var="element">
                                                                 <div class="panel panel-default board-element">
                                                                     <div class="panel-heading">
                                                                         <h3>${element.name}</h3>
+                                                                        <a href="#"><i class="icon-fixed-width icon-pencil pull-right"></i></a>
+                                                                        <a href="#"><i class="icon-remove pull-right"></i></a>
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p>${element.description}</p>

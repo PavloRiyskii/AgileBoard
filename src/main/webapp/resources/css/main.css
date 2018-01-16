@@ -256,3 +256,18 @@ h3{
     white-space: nowrap;
 }
 
+.btn-toolbar .btn  {
+    margin-top: -55px;
+}
+
+.icon-pencil {
+    color: #555;
+    margin-right: 20px;
+}
+.icon-remove {
+    color: #555;
+}
+
+.panel-heading .pull-right {
+    margin-top: -55px;
+}
