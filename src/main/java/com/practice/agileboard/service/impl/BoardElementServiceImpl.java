@@ -39,8 +39,12 @@ public class BoardElementServiceImpl implements BoardElementService {
 
     public void create(CreateBoardElementDTO dto) {
         BoardElement lastElement = this.elementRepository.findBoardElementByBoardIdOrderByPositionDesc(dto.getBoardId());
+        int lastElementIndex = 0;
+        if(lastElement != null) {
+            lastElementIndex = lastElement.getPosition() + 1;
+        }
         BoardElement element = new BoardElement(dto.getName(), dto.getDescription(),
-                lastElement.getPosition() +  1, dto.getBoardId());
+                lastElementIndex, dto.getBoardId());
         this.elementRepository.save(element);
     }
 

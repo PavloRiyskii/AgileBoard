@@ -26,7 +26,8 @@ public class BoardElementController {
     private BoardElementService elementService;
 
     @RequestMapping(value = "/save")
-    public String savePage() {
+    public String savePage(@PathVariable("boardId") String boardId, Model model) {
+        model.addAttribute("boardId", boardId);
         return "save_element";
     }
 

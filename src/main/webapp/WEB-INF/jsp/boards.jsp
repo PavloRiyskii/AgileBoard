@@ -29,6 +29,7 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="${pageContext.request.contextPath}/boards/save">Create Board</a></li>
                     <li class=""><a href="${pageContext.request.contextPath}/logout">Log Out</a></li>
                 </ul>
             </div>
@@ -52,14 +53,25 @@
                                     <c:forEach items="${boards}" var="board">
                                         <td class="table-data">
                                             <div>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-4 table-coll">
                                                     <div class="panel panel-default">
-                                                        <!-- style="min-height: 40px; min-width: 250px; -->
                                                         <div class="panel-heading">
                                                             <h3>${board.name}</h3>
                                                         </div>
                                                         <div class="panel-body">
-                                                            asd
+                                                            <c:forEach items="${board.elements}" var="element">
+                                                                <div class="panel panel-default board-element">
+                                                                    <div class="panel-heading">
+                                                                        <h3>${element.name}</h3>
+                                                                    </div>
+                                                                    <div class="panel-body">
+                                                                        <p>${element.description}</p>
+                                                                    </div>
+                                                                </div>
+                                                            </c:forEach>
+                                                                <div class="panel-body add-board-element centered">
+                                                                    <a href="${pageContext.request.contextPath}/boards/${board.id}/elements/save">+</a>
+                                                                </div>
                                                         </div>
                                                     </div>
                                                 </div>
