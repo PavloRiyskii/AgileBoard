@@ -58,7 +58,7 @@ public  class UserbBoardServiceImpl implements UserbBoardService {
         UserBoard userBoard = this.boardRepository.findOne(boardId);
         UserBoardDTO board = new UserBoardDTO();
         board.setName(userBoard.getName());
-        board.setId(board.getId());
+        board.setId(boardId);
         List<BoardElement> elements = this.elementRepository.findBoardElementsByBoardIdOrderByPosition(board.getId());
         List<BoardElementDTO> elementDTOS = new LinkedList<BoardElementDTO>();
         for(BoardElement element : elements) {

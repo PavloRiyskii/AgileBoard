@@ -58,16 +58,16 @@
                                                     <div class="panel panel-default">
                                                         <div class="panel-heading">
                                                             <h3>${board.name}</h3>
-                                                            <a href="#"><i class="icon-fixed-width icon-pencil pull-right"></i></a>
-                                                            <a href="#"><i class="icon-remove pull-right"></i></a>
+                                                            <a href="${pageContext.request.contextPath}/boards/${board.id}"><i onmouseover="show(this)" onmouseout="hide(this)" id="pencil-board-${board.id}" class="icon-fixed-width icon-pencil pull-right b-i-pencil"></i></a>
+                                                            <a href="#"><i onmouseover="show(this)" onmouseout="hide(this)" onclick="deleteElement(this, '${pageContext.request.contextPath}')" id="remove-board-${board.id}" class="icon-remove pull-right b-i-remove"></i></a>
                                                         </div>
                                                         <div class="panel-body">
                                                             <c:forEach items="${board.elements}" var="element">
                                                                 <div class="panel panel-default board-element">
                                                                     <div class="panel-heading">
                                                                         <h3>${element.name}</h3>
-                                                                        <a href="#"><i class="icon-fixed-width icon-pencil pull-right"></i></a>
-                                                                        <a href="#"><i class="icon-remove pull-right"></i></a>
+                                                                        <a href="${pageContext.request.contextPath}/boards/${board.id}/elements/${element.id}"><i onmouseover="show(this)" onmouseout="hide(this)" class="icon-fixed-width icon-pencil pull-right e-i-pencil" id="pencil-element-${element.id}"></i></a>
+                                                                        <a><i onmouseover="show(this)" onmouseout="hide(this)" onclick="deleteElement(this, '${pageContext.request.contextPath}')" class="icon-remove pull-right e-i-remove" id="remove-element-${element.id}"></i></a>
                                                                     </div>
                                                                     <div class="panel-body">
                                                                         <p>${element.description}</p>
@@ -92,10 +92,7 @@
         </div>
     </div>
 
-
-
-
-
+    <script src="${pageContext.request.contextPath}/resources/js/boards.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
 </body>

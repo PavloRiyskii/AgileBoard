@@ -5,7 +5,6 @@ import com.practice.agileboard.dto.CreateBoardElementDTO;
 import com.practice.agileboard.service.BoardElementService;
 import com.practice.agileboard.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,9 +37,10 @@ public class BoardElementController {
     }
 
     @RequestMapping(value = "/{elementId}")
-    public String updatePage(@PathVariable("elementId") String elementId, Model model) {
+    public String updatePage(@PathVariable("elementId") String elementId, @PathVariable("boardId") String boardId, Model model) {
         BoardElementDTO dto = this.elementService.getElementByid(elementId);
         model.addAttribute("element", dto);
+        model.addAttribute("boardId", boardId);
         return "update_element";
     }
 

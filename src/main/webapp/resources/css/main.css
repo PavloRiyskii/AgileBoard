@@ -261,13 +261,17 @@ h3{
 }
 
 .icon-pencil {
-    color: #555;
     margin-right: 20px;
-}
-.icon-remove {
-    color: #555;
 }
 
 .panel-heading .pull-right {
     margin-top: -55px;
+}
+
+.e-i-pencil, .e-i-remove{
+    color: #d2cccc;
+}
+
+.b-i-pencil, .b-i-remove{
+    color: #8f8686;
 }

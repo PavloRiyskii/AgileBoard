@@ -3,11 +3,13 @@ package com.practice.agileboard.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 /**
  * Created by Павло on 08.12.2017.
  */
 @Document(collection = "users")
-public class User {
+public class User implements Serializable{
 
     @Id
     private String id;
