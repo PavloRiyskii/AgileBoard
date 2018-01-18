@@ -70,19 +70,7 @@
         </div>
     </div>
 
-    <!--script>
-        function sendPatchRequest() {
-            var xhr = new XMLHttpRequest();
-            var body = '?name=' +document.getElementById("name").value +
-                '&description=' + document.getElementById("description").value + "&boardId=${boardId}";
-            xhr.open("PATCH", "${pageContext.request.contextPath}/boards/${boardId}/elements/${element.id}" + body, false);
-            xhr.setRequestHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
-            xhr.send(null);
-            window.location.href = '${pageContext.request.contextPath}/boards';
-        }
-    </script -->
-
-    <script src="${pageContext.request.contextPath}/resources/js/update.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/update_element.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
 
