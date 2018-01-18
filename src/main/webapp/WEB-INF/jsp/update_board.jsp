@@ -41,27 +41,27 @@
         <br>
         <div class="col-lg-4 col-lg-offset-4">
             <div class="row centered create-board">
-                <h4 >Add new board</h4>
-                <form action="${pageContext.request.contextPath}/boards/${board.id}" method="post">
+                <h>Add new board</h>
                     <table>
                         <tr>
                             <td>
                                 <label>Board Name</label>
                             </td>
                             <td>
-                                <input type="text" value="${board.name}" name="name">
+                                <input type="text" value="${board.name}" name="name" id="name">
                             </td>
                         </tr>
                         <tr>
                             <td/>
                             <td>
-                                <input type="submit" value="Update"><br>
+                                <input type="submit" value="Update" onclick="sendPatchRequest('${pageContext.request.contextPath}', '${board.id}')"><br>
                             </td>
                         </tr>
                     </table>
-                </form>
             </div>
         </div>
     </div>
+
+    <script src="${pageContext.request.contextPath}/resources/js/update_board.js"></script>
 </body>
 </html>
