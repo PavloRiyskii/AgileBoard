@@ -30,3 +30,5 @@ function deleteElement(caller, contextPath) {
     xhr.send(null);
     location.reload();
 }
+
+

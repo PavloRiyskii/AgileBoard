@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
-<body>
+<body onload="selectNeedBoard('${boardId}')">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -57,6 +58,18 @@
                             </td>
                             <td>
                                 <input type="text" value="${element.description}" name="description" id="description">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Element Board</label>
+                            </td>
+                            <td>
+                                <select id="selectBoard" name="boardId">
+                                    <c:forEach items="${boards}" var="board">
+                                        <option value="${board.id}" >${board.name}</option>
+                                    </c:forEach>
+                                </select>
                             </td>
                         </tr>
                         <tr>
