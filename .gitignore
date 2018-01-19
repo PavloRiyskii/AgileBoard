@@ -20,3 +20,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+.idea/inspectionProfiles/
+.idea/libraries/Maven__org_springframework_security_spring_security_acl_4_2_3_RELEASE.xml
+.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_4_2_3_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_9_RELEASE.xml
+.idea/vcs.xml
+.idea/workspace.xml
+target/

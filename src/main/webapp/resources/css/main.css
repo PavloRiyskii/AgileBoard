@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Raleway');
+
+body{
+    background-color: #f2f2f2;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 50px;
+    font-family: Raleway;
+    font-weight: 200;
+    font-size: 14px;
+    color:#555;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Raleway;
+    font-weight: 200;
+    color: #333;
+}
+
+p{
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered{
+    text-align: center;
+}
+
+a{
+    color: #f85c37;
+}
+
+a:hover, a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0px;
+}
+
+hr{
+    displat: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar{
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-inverse {
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+}
+
+.navbar-brand{
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+#headerwrap{
+    background: url("/resources/img/header2.jpg") no-repeat center top;
+    margin-top: 80px;
+    padding-top: 20px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1{
+    margin-top: 15px;
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+#headerwrap h2{
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.w{
+    margin-top: 15px;
+    min-height: 400px;
+}
+
+.w h4{
+    font-size: 35px;
+}
+
+.w p{
+    font-size: 15px;
+}
+
+#footer{
+    margin-top: 100px;
+    background-color: #2d2d2d;
+    height: 50px;
+}
+
+#footer p{
+    color: #555;
+    font-size: 20px;
+}
+
+.login_form input{
+    margin: 0 auto;
+    display: block;
+}
+
+.login_form h4{
+    text-align: center;
+}
+
+.signup_form input{
+    margin: 0 auto;
+    display: block;
+    margin-top: -20px;
+}
+
+.signup_form label{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.signup_form h4{
+    text-align: center;
+}
+
+.boards_title{
+    margin-top: 15px;
+    min-height: 400px;
+}
+.boards_title p{
+    font-family: Raleway;
+    font-size: 20px;
+}
+
+.boards_zone {
+    min-width: 500px;
+}
+
+.tab-pane{
+    min-height:300px;
+    overflow-y:scroll;
+    width:100%;
+}
+
+.panel-primary > .panel-heading {
+    background-color: #636161;
+}
+
+.panel-default {
+    min-width: 250px;
+    min-height: 500px;
+    border-color: transparent;
+}
+
+.board-element {
+    min-height: 40px;
+    min-width: 250px;
+    margin-left: -16px;
+}
+
+.board-element > .panel-heading{
+    min-height: 15px;
+    min-width: 225px;
+}
+
+.board-element > .panel-body {
+    min-height: 25px;
+    min-width: 225px;
+}
+
+.tab-pane > table > tbody {
+    vertical-align: top;
+}
+
+.table-coll > .panel-default >.panel-heading {
+    background-color: #8f8686;
+}
+
+.table-coll > .panel-default >.panel-heading >h3 {
+    color: white;
+}
+
+.board-element >.panel-heading {
+    background-color: #d2cccc;
+}
+
+
+.board-element > .panel-body {
+    background-color: #f1eeee;
+}
+
+.board-element > .panel-heading > h4 {
+    font-size: 18px;
+}
+
+.board-element > .panel-body > p {
+    font-size: 16px;
+}
+
+h3{
+    display: block;
+}
+
+.add-board-element {
+    background-color: #dfdfdf;
+    font-size: 42px;
+    min-width: 250px;
+    margin-left: -16px;
+}
+
+.add-board-element > a {
+    color: black;
+}
+
+.create-element tr {
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    border-color: transparent;
+}
+
+.create-element input {
+    font-size: 14px;
+}
+
+.create-board tr {
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    border-color: transparent;
+}
+
+.create-board label {
+    margin-right: 15px;
+}
+
+.create-element label {
+    font-size: 14px;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.btn-toolbar .btn  {
+    margin-top: -55px;
+}
+
+.icon-pencil {
+    margin-right: 20px;
+}
+
+.panel-heading .pull-right {
+    margin-top: -55px;
+}
+
+.e-i-pencil, .e-i-remove{
+    color: #d2cccc;
+}
+
+.b-i-pencil, .b-i-remove{
+    color: #8f8686;
+}
